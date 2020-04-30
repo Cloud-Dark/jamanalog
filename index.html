@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Membuat Jam Digital Dengan Javascript - cloud dark</title>
+  <!-- syntax ini bertujuan untuk menambahkan judul website di addres bar browser -->
+</head>
+<body>
+
+	<style>
+	h1,h2,p,a{
+		font-family: sans-serif;
+		font-weight: normal;
+	}
+
+	.jam-digital-dspngoding {
+		overflow: hidden;
+		width: 330px;
+		margin: 20px auto;
+		border: 5px solid #efefef;
+	}
+	.kotak{
+		float: left;
+		width: 110px;
+		height: 100px;
+		background-color: #189fff;
+	}
+	.jam-digital-dspngoding p {
+		color: #fff;
+		font-size: 36px;
+		text-align: center;
+		margin-top: 30px;
+	}
+
+</style>
+
+<!-- syntax diatas adalah syntax untuk css pada website, melalui syntax ini anda dapat menatur tampilan website anda sesuka hati -->
+<!-- dan berikut jika menggunakan css -->
+<center>
+	<h1>Tutorial Membuat Jam Digital Dengan Javascript</h1>
+	<h2>www.clouddark.xyz</h2>
+</center>
+
+<!-- syntax diatas bertujuan untuk memberikan judul atau header di website anda. untk ukurannya
+h1 = besar
+h2 = sedikit kecil
+h3 = lebih kecil dari h2
+dan seterusnya
+lalu syntax center untuk menaruh nya di tengah tengah -->
+
+
+<div class="jam-digital-dspngoding">
+	<div class="kotak">
+		<p id="jam"></p>
+	</div>
+	<div class="kotak">
+		<p id="menit"></p>
+	</div>
+	<div class="kotak">
+		<p id="detik"></p>
+	</div>
+</div>
+
+<!-- kode diatas bertujuan untuk membuat element element pada website anda
+disana dapat dilihat web kita mempunyai 3 element utama, yaitu jam menit detik
+jika kalian tidak suka dengan detik, bisa kalian hapuskan saja -->
+
+<center>
+	<a href="https://www.cloudddark.xyz">TUTORIAL</a>
+</center>
+
+<script>
+	window.setTimeout("waktu()", 1000);
+
+	function waktu() {
+		var waktu = new Date();
+		setTimeout("waktu()", 1000);
+		document.getElementById("jam").innerHTML = waktu.getHours();
+		document.getElementById("menit").innerHTML = waktu.getMinutes();
+		document.getElementById("detik").innerHTML = waktu.getSeconds();
+	}
+</script>
+
+<!-- syntax diatas adalah berupa coding logika untuk website anda, dari mendapatkan waktu saat ini (dari komputer anda)
+dan mencetak nya di element element diatas, berupa jam menit detik -->
+</body>
+</html>
